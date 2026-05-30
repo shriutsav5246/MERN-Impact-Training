@@ -1,0 +1,106 @@
+@media(max-width:1200px){
+
+.hero-content{
+    width:80%;
+}
+
+.hero-content h1{
+    font-size:45px;
+}
+
+.services{
+    flex-wrap:wrap;
+}
+
+}
+
+@media(max-width:768px){
+
+.navbar{
+    flex-direction:column;
+    gap:20px;
+}
+
+.search-box{
+    flex-direction:column;
+    align-items:center;
+}
+
+.location,
+.search{
+    width:100%;
+}
+
+.hero-content h1{
+    font-size:34px;
+}
+
+.services{
+    flex-direction:column;
+}
+
+.hero-left,
+.hero-right{
+    display:none;
+}
+
+}
+@media(max-width:1200px){
+
+    .restaurant-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .restaurant-grid{
+        grid-template-columns:repeat(1,1fr);
+    }
+
+}
+@media (max-width:1200px){
+
+    .restaurant-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .city-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+@media (max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero-content h1{
+        font-size:38px;
+    }
+
+    .services{
+        flex-direction:column;
+    }
+
+    .restaurant-grid{
+        grid-template-columns:1fr;
+    }
+
+    .city-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-top{
+        grid-template-columns:1fr;
+    }
+
+}

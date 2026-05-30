@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Groww Mutual Fund Clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-left">
+            <img src="./assets/images/groww_logo.webp" alt="Groww Logo" class="logo" />
+
+            <nav class="nav-links">
+                <a href="#">Stocks</a>
+                <a href="#">F&O</a>
+                <a href="#">Mutual Funds</a>
+                <a href="#">More</a>
+            </nav>
+        </div>
+
+        <div class="nav-right">
+            <input type="text" placeholder="Search Groww..." />
+
+            <button>Login/Sign up</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-left">
+                <img src="./assets/images/birla_groww.webp" alt="Fund Logo" class="fund-logo" />
+
+                <h1>Aditya Birla Sun Life Flexi Cap Fund Direct Growth</h1>
+
+                <div class="fund-tags">
+                    <span>Equity</span>
+                    <span>Flexi Cap</span>
+                    <span>Very High Risk</span>
+                </div>
+
+                <div class="returns">
+                    <h2>+17.88%</h2>
+
+                    <span>3Y annualised</span>
+                </div>
+
+                <p class="daily-return">+0.27% 1D</p>
+
+                <div class="graph-container">
+                    <img src="./assets/images/graph image.png" alt="Fund Graph" class="graph-image">
+                </div>
+                <div class="fund-stats">
+
+                    <div class="stat-box">
+                        <p>NAV: 27 May '26</p>
+                        <h4>₹2,095.40</h4>
+                    </div>
+
+                    <div class="stat-box">
+                        <p>Min. for SIP</p>
+                        <h4>₹100</h4>
+                    </div>
+
+                    <div class="stat-box">
+                        <p>Fund size (AUM)</p>
+                        <h4>₹25,631.51 Cr</h4>
+                    </div>
+
+                    <div class="stat-box">
+                        <p>Expense ratio</p>
+                        <h4>0.85%</h4>
+                    </div>
+
+                    <div class="stat-box">
+                        <p>Rating</p>
+                        <h4>4★</h4>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <div class="invest-card">
+
+                    <img src="./assets/images/invest logo.png" alt="Invest" class="invest-icon">
+
+                    <h3>Looking to invest in mutual funds?</h3>
+
+                    <p>Explore diversified funds designed for every investor</p>
+
+                    <button>Invest Now</button>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="return-calculator">
+            <h2>Return Calculator</h2>
+            <div class="calculator-tabs">
+                <button class="active-tab">Monthly SIP</button>
+                <button>One-time</button>
+            </div>
+            <div class="calculator-content">
+                <div class="input-block">
+                    <label>Monthly SIP</label>
+                    <h3>₹25,000</h3>
+
+                    <input type="range" min="500" max="100000" value="25000" class="slider">
+                </div>
+
+                <div class="input-block">
+                    <label>Time period</label>
+                    <h3>10 Yr</h3>
+
+                    <input type="range" min="1" max="30" value="10" class="slider">
+                </div>
+            </div>
+            <div class="result-section">
+
+                <div class="result-left">
+
+                    <div class="result-item">
+                        <p>Invested amount</p>
+                        <h4>₹30 L</h4>
+                    </div>
+
+                    <div class="result-item">
+                        <p>Est. returns</p>
+                        <h4>₹28.5 L</h4>
+                    </div>
+
+                    <div class="result-item">
+                        <p>Total value</p>
+                        <h4>₹58.5 L</h4>
+                    </div>
+
+                </div>
+
+                <div class="result-right">
+
+                    <div class="donut-placeholder"></div>
+
+                    <div class="chart-legend">
+
+                        <div class="legend-item">
+                            <span class="green-dot"></span>
+                            <p>Invested amount</p>
+                        </div>
+
+                        <div class="legend-item">
+                            <span class="light-dot"></span>
+                            <p>Est. returns</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <section class="fund-details">
+
+            <h2>About the Fund</h2>
+
+            <div class="about-card">
+
+                <p>
+                    The fund aims to generate long-term capital appreciation by
+                    investing across large-cap, mid-cap and small-cap companies.
+                    It follows a flexible investment strategy and dynamically
+                    allocates assets based on market opportunities.
+                </p>
+
+            </div>
+        </section>
+        <section class="fund-managers">
+
+            <h2>Fund Managers</h2>
+
+            <div class="manager-card">
+
+                <div class="manager-avatar">
+                    AS
+                </div>
+
+                <div class="manager-info">
+                    <h3>A. Balasubramanian</h3>
+                    <p>Managing this fund since Jan 2019</p>
+                </div>
+
+            </div>
+        </section>
+        <section class="fund-overview">
+
+            <h2>Fund Overview</h2>
+
+            <div class="overview-grid">
+
+                <div class="overview-item">
+                    <p>Category</p>
+                    <h4>Flexi Cap Fund</h4>
+                </div>
+
+                <div class="overview-item">
+                    <p>Risk Level</p>
+                    <h4>Very High</h4>
+                </div>
+
+                <div class="overview-item">
+                    <p>Fund House</p>
+                    <h4>Aditya Birla Sun Life MF</h4>
+                </div>
+
+                <div class="overview-item">
+                    <p>Benchmark</p>
+                    <h4>NIFTY 500 TRI</h4>
+                </div>
+
+                <div class="overview-item">
+                    <p>Exit Load</p>
+                    <h4>1%</h4>
+                </div>
+
+                <div class="overview-item">
+                    <p>Lock-in Period</p>
+                    <h4>None</h4>
+                </div>
+            </div>
+        </section>
+        <section class="top-holdings">
+
+            <h2>Top Holdings</h2>
+
+            <div class="holdings-card">
+
+                <div class="holding-row">
+                    <span>HDFC Bank Ltd.</span>
+                    <span class="holding-percentage">8.45%</span>
+                </div>
+
+                <div class="holding-row">
+                    <span>ICICI Bank Ltd.</span>
+                    <span class="holding-percentage">7.82%</span>
+                </div>
+
+                <div class="holding-row">
+                    <span>Reliance Industries Ltd.</span>
+                    <span class="holding-percentage">6.91%</span>
+                </div>
+
+                <div class="holding-row">
+                    <span>Infosys Ltd.</span>
+                    <span class="holding-percentage">5.76%</span>
+                </div>
+
+                <div class="holding-row">
+                    <span>Larsen & Toubro Ltd.</span>
+                    <span class="holding-percentage">4.52%</span>
+                </div>
+
+            </div>
+
+        </section>
+        <section class="fund-performance">
+
+            <h2>Fund Performance</h2>
+
+            <div class="performance-grid">
+
+                <div class="performance-card">
+                    <p>1 Year Return</p>
+                    <h3>22.4%</h3>
+                </div>
+
+                <div class="performance-card">
+                    <p>3 Year Return</p>
+                    <h3>17.88%</h3>
+                </div>
+
+                <div class="performance-card">
+                    <p>5 Year Return</p>
+                    <h3>19.6%</h3>
+                </div>
+
+                <div class="performance-card">
+                    <p>Since Inception</p>
+                    <h3>15.3%</h3>
+                </div>
+
+            </div>
+        </section>
+        <section class="faq-section">
+
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-container">
+
+                <details class="faq-item">
+                    <summary>What is Aditya Birla Sun Life Flexi Cap Fund?</summary>
+                    <p>
+                        It is an equity mutual fund that invests across large-cap,
+                        mid-cap and small-cap companies to generate long-term
+                        capital appreciation.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>What is the minimum SIP amount?</summary>
+                    <p>
+                        The minimum SIP amount for this fund is ₹100.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>What is the risk level of this fund?</summary>
+                    <p>
+                        This fund falls under the Very High Risk category.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Is this fund suitable for long-term investment?</summary>
+                    <p>
+                        Yes. Flexi-cap funds are generally considered suitable for
+                        investors with a long-term investment horizon.
+                    </p>
+                </details>
+
+            </div>
+
+        </section>
+    </main>
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <img src="./assets/images/groww_logo.webp" alt="Groww Logo">
+
+                <p>
+                    Vaishnavi Tech Park, South Tower,
+                    Sarjapur Main Road, Bengaluru, Karnataka 560103
+                </p>
+            </div>
+
+            <div class="footer-links">
+
+                <div class="footer-column">
+                    <h4>Products</h4>
+                    <a href="#">Stocks</a>
+                    <a href="#">Mutual Funds</a>
+                    <a href="#">F&O</a>
+                    <a href="#">SIP</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Contact</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <a href="#">Help Center</a>
+                    <a href="#">Calculators</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Groww Clone | Created by Utsav Shrivastav
+        </div>
+
+    </footer>
+</body>
+
+</html>

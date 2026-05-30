@@ -1,0 +1,777 @@
+html{
+    scroll-behavior:smooth;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Inter', Helvetica, sans-serif;
+    margin:0;
+    background:#ffffff;
+}
+
+.navbar{
+    height:80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    max-width:1200px;
+    margin:auto;
+
+    border-bottom:1px solid #eaeaea;
+
+    position:sticky;
+    top:0;
+
+    background:white;
+
+    z-index:1000;
+}
+.logo{
+    height: 40px;
+    width: auto;
+}
+.nav-left{
+    display:flex;
+    align-items:center;
+    gap:40px;
+}
+
+.nav-left nav{
+    display:flex;
+    gap:30px;
+}
+
+.nav-left a{
+    text-decoration:none;
+    color:#44475b;
+    font-size:15px;
+    font-weight:500;
+}
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.nav-right input{
+    width:320px;
+    height:44px;
+
+    border:1px solid #e5e5e5;
+    border-radius:8px;
+
+    padding-left:16px;
+
+    font-size:14px;
+}
+
+.nav-right button{
+    height:44px;
+    cursor:pointer;
+    padding:0 24px;
+
+    border:none;
+    border-radius:8px;
+
+    background:#00d09c;
+    color:white;
+    font-weight:600;
+}
+.container{
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+}
+.nav-left a:hover{
+    color:#00d09c;
+}
+.hero{
+    display:flex;
+    justify-content:space-between;
+    gap:60px;
+    padding-top:25px;
+}
+
+.hero-left h1{
+    margin-top:18px;
+    font-size:28px;
+    font-weight:600;
+    color:#44475b;
+    line-height:1.4;
+    max-width:620px;
+}
+.hero-right{
+    width:330px;
+    flex:none;
+
+    position:sticky;
+    top:110px;
+    height:fit-content;
+}
+
+.fund-logo{
+    width:40px;
+    height:40px;
+    object-fit:contain;
+}
+
+.fund-tags{
+    display:flex;
+    gap:12px;
+    padding:6px 14px;
+    font-size:13px;
+    margin-top:20px;
+}
+
+.fund-tags span{
+    padding:6px 14px;
+    font-size:13px;
+    border:1px solid #e5e5e5;
+    border-radius:20px;
+    color:#44475b;
+}
+.returns{
+    margin-top:30px;
+
+    display:flex;
+    align-items:center;
+
+    gap:15px;
+}
+
+.returns h2{
+    color:#00d09c;
+    font-size:32px;
+    font-weight:700;
+}
+
+.returns span{
+    color:#7c7e8c;
+}
+
+.daily-return{
+    margin-top:10px;
+
+    color:#00d09c;
+
+    font-weight:600;
+}
+
+.invest-card{
+    border:1px solid #e5e5e5;
+    border-radius:12px;
+    padding:35px 25px;
+    text-align:center;
+    min-height:180px;
+}
+
+.invest-card h3{
+    color:#44475b;
+
+    margin-bottom:15px;
+}
+
+.invest-card p{
+    color:#7c7e8c;
+
+    margin-bottom:25px;
+}
+
+.invest-card button{
+    width:100%;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#00d09c;
+
+    color:white;
+
+    font-weight:600;
+
+    cursor:pointer;
+}
+.fund-stats{
+    display:flex;
+    gap:45px;
+    justify-content:flex-start;
+
+    margin-top:40px;
+
+    padding-bottom:40px;
+
+    border-bottom:1px solid #f0f0f0;
+}
+
+.stat-box{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.stat-box p{
+    color:#7c7e8c;
+    font-size:14px;
+}
+
+.stat-box h4{
+    font-size:18px;
+    font-weight:600;
+}
+
+.invest-icon{
+    width:90px;
+    height:auto;
+    margin-bottom:20px;
+}
+.graph-container{
+    margin-top:35px;
+}
+
+.graph-image{
+    width:100%;
+    display:block;
+}
+.return-calculator{
+    margin-top:50px;
+    padding-bottom:30px;
+}
+
+.return-calculator h2{
+    font-size:28px;
+    font-weight:600;
+    color:#44475b;
+}
+.calculator-tabs{
+    display:flex;
+    gap:15px;
+
+    margin-top:25px;
+}
+
+.calculator-tabs button{
+    height:44px;
+    padding:0 24px;
+
+    border:1px solid #e5e5e5;
+    border-radius:25px;
+
+    background:white;
+
+    font-size:15px;
+    font-weight:500;
+
+    color:#44475b;
+
+    cursor:pointer;
+}
+
+.active-tab{
+    background:#00d09c !important;
+    color:white !important;
+    border-color:#00d09c !important;
+}
+.calculator-content{
+    margin-top:40px;
+    display:flex;
+    gap:80px;
+}
+
+.input-block label{
+    display:block;
+    color:#7c7e8c;
+    font-size:14px;
+    margin-bottom:6px;
+}
+
+.input-block h3{
+    font-size:36px;
+    font-weight:600;
+    color:#44475b;
+}
+.slider{
+    width:260px;
+    margin-top:25px;
+
+    appearance:none;
+    height:4px;
+
+    background:#00d09c;
+    border-radius:20px;
+}
+
+.slider::-webkit-slider-thumb{
+    appearance:none;
+
+    width:18px;
+    height:18px;
+
+    border-radius:50%;
+
+    background:#00d09c;
+
+    cursor:pointer;
+}
+.result-section{
+    margin-top:40px;
+    display:flex;
+    align-items:flex-start;
+    gap:80px;
+}
+
+.result-left{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.result-item p{
+    color:#7c7e8c;
+    font-size:14px;
+}
+
+.result-item h4{
+    margin-top:6px;
+    font-size:22px;
+    font-weight:600;
+    color:#44475b;
+}
+.donut-placeholder{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+
+    background:
+        conic-gradient(
+            #00d09c 0deg 190deg,
+            #e3f8f2 190deg 360deg
+        );
+
+    position:relative;
+}
+.donut-placeholder::after{
+    content:"";
+
+    position:absolute;
+
+    width:105px;
+    height:105px;
+
+    background:white;
+    border-radius:50%;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+}
+.chart-legend{
+    margin-top:12px;
+}
+
+.legend-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px;
+}
+
+.green-dot,
+.light-dot{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+}
+
+.green-dot{
+    background:#00d09c;
+}
+
+.light-dot{
+    background:#c7f4e8;
+}
+.result-right{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.fund-details{
+    margin-top:15px;
+    padding-top:20px;
+    border-top:1px solid #f0f0f0;
+}
+
+.fund-details h2{
+    font-size:28px;
+    font-weight:600;
+    color:#44475b;
+}
+.legend-item p{
+    font-size:14px;
+    color:#44475b;
+}
+.fund-details{
+    margin-top:25px;
+    padding-top:25px;
+    border-top:1px solid #f0f0f0;
+}
+
+.fund-details h2{
+    font-size:32px;
+    font-weight:600;
+    color:#44475b;
+}
+
+.about-card{
+    margin-top:30px;
+
+    border:1px solid #eaeaea;
+    border-radius:12px;
+
+    padding:30px;
+
+    background:#fff;
+}
+
+.about-card p{
+    color:#44475b;
+    font-size:16px;
+    line-height:1.8;
+}
+.fund-managers{
+    margin-top:60px;
+}
+
+.fund-managers h2{
+    font-size:32px;
+    font-weight:600;
+    color:#44475b;
+}
+
+.manager-card{
+    margin-top:30px;
+
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    padding:24px;
+
+    border:1px solid #eaeaea;
+    border-radius:12px;
+
+    background:#fff;
+}
+
+.manager-avatar{
+    width:64px;
+    height:64px;
+
+    border-radius:50%;
+
+    background:#00d09c;
+    color:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:24px;
+    font-weight:700;
+}
+
+.manager-info h3{
+    font-size:20px;
+    color:#44475b;
+    margin-bottom:6px;
+}
+
+.manager-info p{
+    color:#7c7e8c;
+    font-size:14px;
+}
+.fund-overview{
+    margin-top:60px;
+}
+
+.fund-overview h2{
+    font-size:32px;
+    font-weight:600;
+    color:#44475b;
+}
+
+.overview-grid{
+    margin-top:30px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.overview-item{
+    border:1px solid #eaeaea;
+    border-radius:12px;
+
+    padding:24px;
+
+    background:#fff;
+}
+
+.overview-item p{
+    font-size:14px;
+    color:#7c7e8c;
+
+    margin-bottom:10px;
+}
+
+.overview-item h4{
+    font-size:18px;
+    font-weight:600;
+    color:#44475b;
+}
+.top-holdings{
+    margin-top:60px;
+}
+
+.top-holdings h2{
+    font-size:32px;
+    font-weight:600;
+    color:#44475b;
+}
+
+.holdings-card{
+    margin-top:30px;
+
+    border:1px solid #eaeaea;
+    border-radius:12px;
+
+    overflow:hidden;
+}
+
+.holding-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 24px;
+
+    border-bottom:1px solid #f2f2f2;
+}
+
+.holding-row:last-child{
+    border-bottom:none;
+}
+
+.holding-row span:first-child{
+    color:#44475b;
+    font-weight:500;
+}
+
+.holding-row span:last-child{
+    color:#00d09c;
+    font-weight:600;
+}
+.fund-performance{
+    margin-top:60px;
+}
+
+.fund-performance h2{
+    font-size:32px;
+    font-weight:600;
+    color:#44475b;
+}
+
+.performance-grid{
+    margin-top:30px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+}
+
+.performance-card{
+    padding:24px;
+
+    border:1px solid #eaeaea;
+    border-radius:12px;
+
+    background:#fff;
+}
+
+.performance-card p{
+    color:#7c7e8c;
+    font-size:14px;
+    margin-bottom:12px;
+}
+
+.performance-card h3{
+    color:#00d09c;
+    font-size:28px;
+    font-weight:700;
+}
+.faq-section{
+    margin-top:60px;
+    padding-bottom:80px;
+}
+
+.faq-section h2{
+    font-size:32px;
+    font-weight:600;
+    color:#44475b;
+}
+
+.faq-container{
+    margin-top:30px;
+}
+
+.faq-item{
+    border:1px solid #eaeaea;
+    border-radius:12px;
+
+    margin-bottom:16px;
+
+    padding:20px 24px;
+
+    background:#fff;
+}
+
+.faq-item summary{
+    cursor:pointer;
+
+    font-size:18px;
+    font-weight:600;
+
+    color:#44475b;
+
+    list-style:none;
+}
+
+.faq-item summary::-webkit-details-marker{
+    display:none;
+}
+
+.faq-item p{
+    margin-top:16px;
+
+    color:#7c7e8c;
+
+    line-height:1.7;
+
+    font-size:15px;
+}
+.footer{
+    margin-top:30px;
+
+    background:#fafafa;
+
+    border-top:1px solid #eaeaea;
+}
+
+.footer-container{
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:50px 0;
+
+    display:flex;
+    justify-content:space-between;
+
+    gap:60px;
+}
+
+.footer-brand{
+    max-width:300px;
+}
+
+.footer-brand img{
+    height:40px;
+    margin-bottom:20px;
+}
+
+.footer-brand p{
+    color:#7c7e8c;
+    line-height:1.7;
+    font-size:14px;
+}
+
+.footer-links{
+    display:flex;
+    gap:80px;
+}
+
+.footer-column{
+    display:flex;
+    flex-direction:column;
+}
+
+.footer-column h4{
+    margin-bottom:25px;
+    transition:0.3s;
+    color:#44475b;
+}
+
+.footer-column a{
+    text-decoration:none;
+
+    color:#7c7e8c;
+
+    margin-bottom:12px;
+
+    font-size:14px;
+}
+
+.footer-column a:hover{
+    color:#00d09c;
+}
+
+.footer-bottom{
+    text-align:center;
+
+    padding:20px;
+
+    border-top:1px solid #eaeaea;
+
+    color:#7c7e8c;
+
+    font-size:14px;
+}
+.overview-card:hover,
+.manager-card:hover,
+.faq-item:hover{
+    transform:translateY(-2px);
+    transition:0.3s;
+    box-shadow:0 4px 12px rgba(0,0,0,0.05);
+}
+.faq-item{
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.faq-item:hover{
+    border-color:#00d09c;
+}
+section{
+    margin-bottom:70px;
+}
+.nav-right input:focus{
+    outline:none;
+    border-color:#00d09c;
+}
+.holding-percent{
+    color:#00d09c;
+    font-weight:600;
+}
