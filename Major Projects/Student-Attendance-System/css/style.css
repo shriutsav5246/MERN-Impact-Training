@@ -2,60 +2,70 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Segoe UI,sans-serif;
 }
 
 body{
-    background:#f4f6f9;
+    background:#f4f7fc;
 }
 
-.container{
-    width:90%;
-    margin:auto;
-}
-
-header{
-    background:#1f2937;
-    color:white;
-    text-align:center;
-    padding:20px;
-    margin-top:20px;
-    border-radius:10px;
-}
-
-nav{
-    margin-top:20px;
-}
-
-nav ul{
+.layout{
     display:flex;
-    justify-content:center;
-    gap:20px;
-    list-style:none;
-    background:white;
-    padding:15px;
-    border-radius:10px;
+    min-height:100vh;
 }
 
-nav ul li a{
-    text-decoration:none;
-    color:#333;
-    font-weight:bold;
-    transition:0.3s;
+.sidebar{
+    width:250px;
+    background:#111827;
+    color:white;
+    padding:20px;
 }
 
-nav ul li a:hover{
-    color:#2563eb;
-}
-
-.welcome-section{
-    background:white;
-    margin-top:20px;
-    padding:30px;
-    border-radius:10px;
+.logo{
     text-align:center;
+    margin-bottom:40px;
 }
 
-.welcome-section h2{
-    margin-bottom:10px;
+.menu{
+    list-style:none;
+}
+
+.menu li{
+    margin-bottom:15px;
+}
+
+.menu li a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:12px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.menu li a:hover{
+    background:#2563eb;
+}
+
+.active a{
+    background:#2563eb;
+}
+
+.main-content{
+    flex:1;
+    padding:25px;
+}
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.profile{
+    background:white;
+    padding:10px 20px;
+    border-radius:10px;
+    font-weight:600;
 }

@@ -12,39 +12,113 @@
 
 <body>
 
-    <div class="container">
+    <div class="layout">
 
-        <header>
-            <h1>Dashboard</h1>
-        </header>
+        <!-- Sidebar -->
 
-        <nav>
-            <ul>
-                <li><a href="dashboard.html">Dashboard</a></li>
-                <li><a href="students.html">Students</a></li>
-                <li><a href="attendance.html">Attendance</a></li>
-                <li><a href="reports.html">Reports</a></li>
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>SAMS</h2>
+            </div>
+
+            <ul class="menu">
+                <li class="active">
+                    <a href="dashboard.html">Dashboard</a>
+                </li>
+
+                <li>
+                    <a href="students.html">Students</a>
+                </li>
+
+                <li>
+                    <a href="attendance.html">Attendance</a>
+                </li>
+
+                <li>
+                    <a href="reports.html">Reports</a>
+                </li>
+
+                <li>
+                    <a href="settings.html">Settings</a>
+                </li>
             </ul>
-        </nav>
 
-        <div class="dashboard-cards">
+        </aside>
 
-            <div class="card">
-                <h2 id="totalStudents">0</h2>
-                <p>Total Students</p>
-            </div>
+        <!-- Main Content -->
 
-            <div class="card">
-                <h2 id="presentStudents">0</h2>
-                <p>Present</p>
-            </div>
+        <main class="main-content">
 
-            <div class="card">
-                <h2 id="absentStudents">0</h2>
-                <p>Absent</p>
-            </div>
+            <header class="topbar">
 
-        </div>
+                <div>
+                    <h1>Student Attendance Management System</h1>
+                </div>
+
+                <div class="profile">
+                    Admin
+                </div>
+
+            </header>
+
+            <!-- Statistics -->
+
+            <section class="stats-grid">
+
+                <div class="stat-card">
+                    <h2 id="totalStudents">0</h2>
+                    <p>Total Students</p>
+                </div>
+
+                <div class="stat-card">
+                    <h2 id="presentStudents">0</h2>
+                    <p>Present Today</p>
+                </div>
+
+                <div class="stat-card">
+                    <h2 id="absentStudents">0</h2>
+                    <p>Absent Today</p>
+                </div>
+
+                <div class="stat-card">
+                    <h2 id="attendanceRate">0%</h2>
+                    <p>Attendance Rate</p>
+                </div>
+
+            </section>
+
+            <!-- Dashboard Panels -->
+
+            <section class="dashboard-panels">
+
+                <div class="panel">
+                    <h3>Recent Activity</h3>
+
+                    <div id="activityList">
+                        No activity available
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <h3>Quick Actions</h3>
+
+                    <button class="action-btn">
+                        Add Student
+                    </button>
+
+                    <button class="action-btn">
+                        Mark Attendance
+                    </button>
+
+                    <button class="action-btn">
+                        Generate Report
+                    </button>
+                </div>
+
+            </section>
+
+        </main>
 
     </div>
 
