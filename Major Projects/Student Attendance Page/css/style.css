@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary: #2563eb;
+    --success: #16a34a;
+    --danger: #dc2626;
+    --warning: #f59e0b;
+    --dark: #1e293b;
+    --gray: #64748b;
+    --light: #f8fafc;
+    --border: #e2e8f0;
+}
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #f1f5f9;
+    min-height: 100vh;
+    padding: 25px;
+    color: var(--dark);
+}
+.container {
+    max-width: 1600px;
+    margin: auto;
+}
+
+.header {
+    background: white;
+    border-radius: 16px;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+}
+.header h1 {
+    font-size: 2rem;
+    margin-bottom: 6px;
+}
+.header p {
+    color: var(--gray);
+}
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    margin-bottom: 25px;
+}
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.card h3 {
+    font-size: 16px;
+    color: var(--gray);
+    margin-bottom: 10px;
+}
+.card p {
+    font-size: 36px;
+    font-weight: bold;
+}
+.total-card {
+    border-left: 6px solid var(--primary);
+}
+.present-card {
+    border-left: 6px solid var(--success);
+}
+.absent-card {
+    border-left: 6px solid var(--danger);
+}
+.percentage-card {
+    border-left: 6px solid var(--warning);
+}
+.control-panel {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    display: grid;
+    grid-template-columns: 220px 1fr auto auto;
+    gap: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.input-group label {
+    font-size: 14px;
+    font-weight: 600;
+}
+.input-group input,
+.form-group input,
+.form-group select {
+    width: 100%;
+    height: 50px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 15px;
+}
+.btn {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 14px 22px;
+    color: white;
+    transition: 0.25s;
+}
+.btn:hover {
+    transform: translateY(-2px);
+}
+.add-btn {
+    background: var(--success);
+}
+.save-btn {
+    background: var(--primary);
+}
+.cancel-btn {
+    background: var(--gray);
+}
+.table-section {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+thead {
+    background: var(--dark);
+    color: white;
+}
+th {
+    padding: 18px;
+    font-size: 15px;
+}
+td {
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+tbody tr:hover {
+    background: #f8fafc;
+}
+.status-present {
+    background: #dcfce7;
+    color: #15803d;
+    padding: 8px 14px;
+    border-radius: 50px;
+    font-weight: 600;
+}
+.status-absent {
+    background: #fee2e2;
+    color: #b91c1c;
+    padding: 8px 14px;
+    border-radius: 50px;
+    font-weight: 600;
+}
+.action-group {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.mark-btn {
+    background: var(--primary);
+    color: white;
+}
+.edit-btn {
+    background: var(--warning);
+    color: white;
+}
+.delete-btn {
+    background: var(--danger);
+    color: white;
+}
+.small-btn {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+}
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+.modal.active {
+    display: flex;
+}
+.modal-content {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+}
+.modal-header {
+    padding: 20px 25px;
+    background: var(--dark);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.close-modal {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+.modal-body {
+    padding: 25px;
+}
+.form-group {
+    margin-bottom: 18px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+.modal-footer {
+    padding: 20px 25px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    border-top: 1px solid #eee;
+}
+@media(max-width:1200px){
+    .dashboard{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .control-panel{
+        grid-template-columns: 1fr;
+    }
+}
+@media(max-width:700px){
+    body{
+        padding:15px;
+    }
+    .dashboard{
+        grid-template-columns:1fr;
+    }
+    .header h1{
+        font-size:1.5rem;
+    }
+    table{
+        min-width:1200px;
+    }
+}
+.theme-toggle {
+    border: none;
+    background: #1e293b;
+    color: white;
+    padding: 14px 22px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    transition: all 0.35s ease;
+}
+.theme-toggle:hover {
+    transform: translateY(-2px);
+}
+.theme-toggle i {
+    transition: transform 0.5s ease;
+}
+.theme-toggle.rotate i {
+    transform: rotate(360deg);
+}
+body,
+.header,
+.card,
+.control-panel,
+.table-section,
+.modal-content,
+input,
+select,
+button {
+    transition: all 0.35s ease;
+}
+/* ===========================
+   DARK MODE
+=========================== */
+body.dark-mode {
+    background: #0f172a;
+    color: #f8fafc;
+}
+body.dark-mode .header,
+body.dark-mode .card,
+body.dark-mode .control-panel,
+body.dark-mode .table-section,
+body.dark-mode .modal-content {
+    background: #1e293b;
+    color: white;
+}
+body.dark-mode .header p {
+    color: #cbd5e1;
+}
+body.dark-mode th {
+    background: #020617;
+}
+body.dark-mode td {
+    border-bottom: 1px solid #334155;
+}
+body.dark-mode tbody tr:hover {
+    background: #334155;
+}
+body.dark-mode input,
+body.dark-mode select {
+    background: #334155;
+    color: white;
+    border: 1px solid #475569;
+}
+body.dark-mode .theme-toggle {
+    background: #f8fafc;
+    color: #0f172a;
+}
